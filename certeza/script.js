@@ -1,3 +1,8 @@
+function redirectToOtherPage() {
+    // Altere a URL abaixo para a página para a qual deseja redirecionar.
+    window.location.href = "../index.html";
+}
+
 // Função para mover o botão "Móvel" para uma posição aleatória
 function moveButton() {
     const movingButton = document.getElementById('movingButton');

@@ -6,7 +6,7 @@ function redirectToOtherPage() {
 function emitHearts() {
     const heartContainer = document.querySelector('.heart-container');
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
         const heart = document.createElement('div');
         heart.classList.add('heart');
         heart.style.left = Math.random() * 100 + 'vw';
