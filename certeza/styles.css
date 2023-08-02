@@ -1,0 +1,65 @@
+/* O restante do seu CSS permanece igual */
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+.photo-container img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.normal-button {
+    background-color: #ff1493;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.moving-button {
+    background-color: #ff1493;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    position: absolute;
+}
+
+.moving-button.active {
+    animation: escape 1s linear infinite;
+}
+
+@keyframes escape {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+    }
+    50% {
+        transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+    }
+    75% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}

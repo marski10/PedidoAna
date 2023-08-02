@@ -1,6 +1,6 @@
 function redirectToOtherPage() {
     // Altere a URL abaixo para a página para a qual deseja redirecionar.
-    window.location.href = "certeza.html";
+    window.location.href = "./certeza/certeza.html";
 }
 
 function emitHearts() {
