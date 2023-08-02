@@ -3,6 +3,12 @@ function redirectToOtherPage() {
     window.location.href = "./certeza/certeza.html";
 }
 
+function redirectToYesPage() {
+    // Altere a URL abaixo para a página para a qual deseja redirecionar.
+    window.location.href = "./certeza/certeza.html";
+}
+
+
 function emitHearts() {
     const heartContainer = document.querySelector('.heart-container');
 
@@ -21,8 +27,16 @@ function emitHearts() {
         heart.appendChild(svg);
         heartContainer.appendChild(heart);
 
-        heart.addEventListener('animationend', () => {
-            heart.remove();
-        });
+         // Último coração criado
+         if (i === 99) {
+            heart.addEventListener('animationend', () => {
+                // Redirecionar para a outra página após a animação
+                redirectToOtherPage();
+            });
+        } else {
+            heart.addEventListener('animationend', () => {
+                heart.remove();
+            });
     }
+}
 }
