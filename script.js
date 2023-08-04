@@ -5,7 +5,7 @@ function redirectToOtherPage() {
 
 function redirectToYesPage() {
     // Altere a URL abaixo para a página para a qual deseja redirecionar.
-    window.location.href = "./certeza/certeza.html";
+    window.location.href = "./aceitou/aceitou.html";
 }
 
 
@@ -31,7 +31,7 @@ function emitHearts() {
          if (i === 99) {
             heart.addEventListener('animationend', () => {
                 // Redirecionar para a outra página após a animação
-                redirectToOtherPage();
+                redirectToYesPage();
             });
         } else {
             heart.addEventListener('animationend', () => {

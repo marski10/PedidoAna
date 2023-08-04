@@ -9,34 +9,6 @@ body {
     overflow: hidden;
 }
 
-.heart-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.heart {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    animation: fall 2s linear infinite;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(100vh);
-        opacity: 1;
-    }
-}
-
 .photo-container {
     margin-top: 20px;
 }
@@ -46,4 +18,35 @@ body {
     max-height: 300px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Defina um valor de z-index maior que o vídeo */
+}
+
+.heart {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: #ff1493;
+    animation: fall 4s linear infinite;
+    z-index: 2; /* Defina um valor de z-index maior que o da .heart-container */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0px) translateX(calc(200vw * var(--randomX) - 100vw));
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(calc(100vh + 20px)) translateX(calc(200vw * var(--randomX) - 100vw));
+        opacity: 1;
+    }
 }
