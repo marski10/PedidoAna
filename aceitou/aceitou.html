@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuva de Corações</title>
+    <title>te mamo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="photo-container">
+        <audio autoplay loop>
+            <source src="insert.mp4" type="audio/mpeg">
+        </audio>
         <video width="850" height="450" controls autoplay onended="redirectToOtherPage()">
           <source src="insert.mp4" type="video/mp4">
         </video>
+        <script>
+            // Redirecionar apï¿½s 5 segundos
+            setTimeout(function() {
+                window.location.href = 'https://youtu.be/BVfiZkPgxbE'; // Substitua "outra-pagina.html" pelo URL da pï¿½gina para a qual vocï¿½ deseja redirecionar
+            }, 3000); // 5000 milissegundos = 5 segundos
+        </script>
     </div>
     <div class="heart-container"></div>
 

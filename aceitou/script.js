@@ -1,6 +1,6 @@
 function redirectToOtherPage() {
     // Altere a URL abaixo para a página para a qual deseja redirecionar.
-    window.location.href = "https://instagram.com/anarafaelam_?igshid=MzRlODBiNWFlZA==";
+    window.location.href = "https://youtu.be/BVfiZkPgxbE";
 }
 
 function emitHearts() {
