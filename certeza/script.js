@@ -1,9 +1,8 @@
 function redirectToOtherPage() {
-    // Altere a URL abaixo para a página para a qual deseja redirecionar.
+ 
     window.location.href = "../index.html";
 }
 
-// Função para mover o botão "Móvel" para uma posição aleatória
 function moveButton() {
     const movingButton = document.getElementById('movingButton');
     const buttonWidth = movingButton.offsetWidth;
@@ -11,21 +10,20 @@ function moveButton() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
 
-    // Gera posições aleatórias para o botão
+    // Gera posiï¿½ï¿½es aleatï¿½rias para o botï¿½o
     const randomX = getRandomNumber(buttonWidth, windowWidth - buttonWidth);
     const randomY = getRandomNumber(buttonHeight, windowHeight - buttonHeight);
 
-    // Define a posição do botão de acordo com as coordenadas aleatórias
+    // Define a posiï¿½ï¿½o do botï¿½o de acordo com as coordenadas aleatï¿½rias
     movingButton.style.left = randomX + 'px';
     movingButton.style.top = randomY + 'px';
 }
 
-// Função auxiliar para gerar um número aleatório dentro de um intervalo
+
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// Impede que o botão "Móvel" seja clicado enquanto estiver em movimento
 let isMoving = false;
 document.getElementById('movingButton').addEventListener('click', (event) => {
     event.stopPropagation();
@@ -34,6 +32,6 @@ document.getElementById('movingButton').addEventListener('click', (event) => {
         isMoving = true;
         setTimeout(() => {
             isMoving = false;
-        }, 1000); // Define um intervalo de 1 segundo antes que o botão possa se mover novamente
+        }, 1000);
     }
 });
